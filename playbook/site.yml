@@ -1,0 +1,9 @@
+---
+
+- name: Assert create file module
+  hosts: local
+  tasks:
+    - name: Run module
+      my_own_namespace.my_own_collection.create:
+        path: "{{ file_path }}"
+        content: "{{ file_content }}"
